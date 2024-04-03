@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik'); 
+
+body {
+    font-family: "Rubik", sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* toggle btn */
+#sidebar {
+    position: absolute; 
+    left : -230px; 
+    top : 0px; 
+    height: 100%;
+   background: #f50404;
+   color: black; 
+   z-index : 4; 
+   width: 230px;
+}
+
+.toggle-btn{
+    position : absolute; 
+    top : 30px ; 
+    left: 240px; 
+    height: 50px;
+    width: 50px;
+}
+.toggle-btn span {
+    width: 60px;
+    height: 10px;
+    background: red;
+    margin-top: 3px;
+    display: block;
+    border-radius : 20px; 
+}
+
+li {
+    list-style-type: none;
+    font-size: 2.4rem ; 
+    padding-left: 5px;
+    cursor : pointer; 
+
+}; 
+
+li:hover{
+    background: #000;
+    color  : white; 
+}
+
+.active span {
+    position : absolute; 
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+.active span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  .active span:nth-child(2) {
+    opacity: 0;
+  }
+  .active span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  .active ~ .content {
+    opacity: 0.3;
+  }
+
+
+
+/* section */
+h1{
+    text-align: center;
+    font-size : 2.5rem ;  
+    color : red; 
+    background: black ;
+    width: 600px;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius : 200px ; 
+    
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px;
+    line-height: 1.5em;
+    margin: 10px;
+
+}
+
+#btn1 {
+    background: red; 
+    padding: 10px;
+    color : black ; 
+    font-size : 0.9rem; 
+    font-weight: 600;
+    width: 200px;
+    border-radius : 50px; 
+    cursor:pointer; 
+}
